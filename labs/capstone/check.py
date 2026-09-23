@@ -8,7 +8,6 @@ import sys
 
 REPORT = os.path.join("data","reports", "summary.txt")
 
-
 def report_path() -> str:
     """Where the nightly report gets written."""
     return os.path.join("data", "reports", "summary.txt")
