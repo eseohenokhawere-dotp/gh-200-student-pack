@@ -14,11 +14,8 @@ jobs:
     runs-on: ${{matrix.os}}
     
     steps:
-      - name: check out repository
-        uses: actions/check@v7
-
-      - name: Set up Python 
-        uses: actions/setup-python@v7.0.1
+      - uses: actions/check@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
           
