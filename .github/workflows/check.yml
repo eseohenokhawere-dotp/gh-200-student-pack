@@ -1,8 +1,10 @@
 name: PR gate
+
 on:
   pull_request:
-    branches: [pr gates]
+    branches: [main]
   workflow_dispatch: 
+  
 jobs:
   checks:
     strategy:
@@ -10,10 +12,12 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{matrix.os}}
+    
     steps:
-      - uses: actions/checkout@<SHA>
-      - uses: actions/setup-python@<SHA>
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
-      - name: Run the check
-        run: python labs/check.py
+          
+      - name: Run the check.py
+        run: python labs/capstone/check.py
