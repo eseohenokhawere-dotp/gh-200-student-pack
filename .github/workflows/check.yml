@@ -14,8 +14,8 @@ jobs:
     runs-on: ${{matrix.os}}
     
     steps:
-      - uses: actions/check@v7
-      - uses: actions/setup-python@v7
+      - uses: actions/check@v8
+      - uses: actions/setup-python@v8
         with:
           python-version: '3.12'
           
